@@ -38,6 +38,9 @@ public class Book {
 
     @PrePersist
     void onCreate() {
-        this.createdAt = LocalDateTime.now();
+    this.createdAt = LocalDateTime.now();
+    if (this.available == null) {
+        this.available = true;
     }
+}
 }
